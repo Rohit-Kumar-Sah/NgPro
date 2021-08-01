@@ -3,11 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ContentComponent } from './content/content.component';
+import { TDComponent } from './content/TemplateDrivenForms/td/td.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    ContentComponent,
+    TDComponent
   ],
   imports: [
     BrowserModule
