@@ -82,3 +82,50 @@
 
 <hr>
 <hr>
+
+<p>ngModel and forms have a good relation to be talked about</p>
+<ul>
+    <li>We spoke about how we can use it as attribute (without any bindings) to set up controls for our form</li>
+    <li>We also spoke about how we can gain access individually to a form control, using ngModel assigned as value to to local reference upon that control </li>
+    <li>Now we'll look as how we can use ngModel with Bindings:</li>
+    <p>One Way ngModel data binding , as well as 2 way</p>
+</ul>
+<p>One Way </p>
+<li>When to use? when setting default values to form feilds i.e. controls</li>
+
+<form #f4="ngForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" [ngModel]="'Jeff'" required>
+    <br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [ngModel]="'jeff@amazon.com'" required email>
+    <input type="submit" [disabled]="f4.invalid">
+</form>
+
+<ul>
+    <li>remember we set up ngModel as attribute on form feilds, to help it become a control of form.</li>
+    <li>we use that ngModel itself , do a property binding, and assign a value that appears as default value for the control</li>
+</ul>
+
+<p>One Way </p>
+<li>When to use? when setting default values to form feilds i.e. controls</li>
+
+<hr>
+
+<p>One Way </p>
+<li>When to use?Some times we want to react as soon as user types , maybe simply printing the same thing...</li>
+
+<form #f5="ngForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" ngModel required>
+    <br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [(ngModel)]="defaultMail" required email #tdMail2="ngModel">
+    <br><small *ngIf="tdMail2.dirty" class="helpText">you entered: {{defaultMail}}</small><br>
+
+    <input type="submit" [disabled]="f5.invalid">
+</form>
+
+<ul>
+    <li>use the same ngModel you used for one waydata binding, to now do two way data binding </li>
+</ul>

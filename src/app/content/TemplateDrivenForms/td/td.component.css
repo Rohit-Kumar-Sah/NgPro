@@ -5,3 +5,7 @@ input.ng-invalid.ng-dirty {
 .error {
     color: red;
 }
+
+.helpText {
+    color: rgb(18, 136, 77);
+}

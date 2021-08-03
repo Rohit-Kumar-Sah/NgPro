@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class TDComponent implements OnInit {
   
+  defaultMail = "jeff@amazon.com";
+
   constructor() { }
   
   ngOnInit(): void {
