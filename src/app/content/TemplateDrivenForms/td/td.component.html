@@ -20,3 +20,24 @@
 
 <hr>
 <hr>
+
+<p>using @VeiwChild+ local reference to access form data ; instead of ngSubmit+local reference event </p>
+<form #f2="ngForm" (ngSubmit)="formSubmit2()">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" ngModel>
+    <br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" ngModel>
+    <input type="submit">
+</form>
+
+<ul>
+    <li>Helpful when you want to assess the form not just when you submit it. But also earlier</li>
+    <li>put name attribute on feilds</li>
+    <li>use ngModel as attribute</li>
+    <li>use ngSubmit event of angular on form tag</li>
+    <li>to watch the feild (form object) , use local reference on form , set it equal to ngForm, and in typscript file, use VeiwChild to access the object locally referenced.
+</ul>
+
+<hr>
+<hr>

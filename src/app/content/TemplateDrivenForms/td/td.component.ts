@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,13 +7,18 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./td.component.css']
 })
 export class TDComponent implements OnInit {
-
+  
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
+  
   formSubmit(formVariable: NgForm){
-      console.log("hi",formVariable);
+    console.log("hi",formVariable);
+  }
+  
+  @ViewChild('f2') formLocalReference !: NgForm ;
+  formSubmit2(){
+console.log(this.formLocalReference);
   }
 }
